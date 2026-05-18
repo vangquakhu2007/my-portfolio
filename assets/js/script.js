@@ -1,4 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Vestibular Control Logic
+    const vestibularBtn = document.getElementById('vestibular-control');
+    const btnText = vestibularBtn ? vestibularBtn.querySelector('.btn-text') : null;
+    
+    // Default state: Phát (Animations enabled)
+    let isAnimationsEnabled = true;
+
+    if (vestibularBtn && btnText) {
+        vestibularBtn.addEventListener('click', () => {
+            isAnimationsEnabled = !isAnimationsEnabled;
+            
+            if (isAnimationsEnabled) {
+                document.body.classList.remove('no-animations');
+                btnText.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                vestibularBtn.setAttribute('aria-label', 'Hoạt ảnh đang bật - Nhấn để tắt');
+                vestibularBtn.setAttribute('title', 'Hoạt ảnh đang bật - Nhấn để tắt');
+                // Trigger a small fade effect for the body as requested (0.5s fade)
+                document.body.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.style.transition = 'opacity 0.5s ease';
+                    document.body.style.opacity = '1';
+                }, 10);
+            } else {
+                document.body.classList.add('no-animations');
+                btnText.innerHTML = '<i class="fa-solid fa-play"></i>';
+                vestibularBtn.setAttribute('aria-label', 'Hoạt ảnh đang tắt - Nhấn để bật');
+                vestibularBtn.setAttribute('title', 'Hoạt ảnh đang tắt - Nhấn để bật');
+                document.body.style.opacity = '1';
+                document.body.style.transition = 'none';
+            }
+        });
+    }
+
     // Theme Toggle Logic
     const tagSwitch = document.querySelector('.tag-switch');
     const themeIcon = tagSwitch.querySelector('i');
@@ -26,6 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const typingSpeed = 20;
 
         function typeWriter() {
+            if (!isAnimationsEnabled) {
+                typingElement.innerHTML = finalHTML;
+                typingElement.classList.remove('typing-animation');
+                if (scrollContainer) {
+                    scrollContainer.classList.remove('scroll-hidden');
+                    scrollContainer.classList.add('scroll-visible');
+                }
+                return;
+            }
+
             if (charIndex < finalHTML.length) {
                 if (finalHTML.charAt(charIndex) === '<') {
                     const tagEnd = finalHTML.indexOf('>', charIndex);
@@ -57,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.querySelector(targetId);
             if (target) {
                 target.scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: isAnimationsEnabled ? 'smooth' : 'auto'
                 });
             }
         });
