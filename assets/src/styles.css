@@ -27,6 +27,79 @@ body.light-theme {
   --bg-color: #f0f2f5;
 }
 
+/* Global Animation Control */
+body.no-animations * {
+  animation: none !important;
+  transition: none !important;
+}
+
+body.no-animations {
+  transition: none !important;
+}
+
+/* Vestibular Control Button (Liquid-Glass) */
+.liquid-glass-btn {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .liquid-glass-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+.liquid-glass-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+body.light-theme .liquid-glass-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Liquid Effect for the button */
+.liquid-glass-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(45deg, transparent, var(--accent-color), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.liquid-glass-btn:hover::before {
+  opacity: 0.6;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: var(--bg-color);
@@ -88,6 +161,7 @@ a {
 
 .tag-switch {
   padding: 12px 15px;
+  flex-shrink: 0;
   background: rgba(255, 255, 255, 0.12); /* Increased for visibility on mobile */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
