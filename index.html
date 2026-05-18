@@ -31,22 +31,22 @@
                 </ul>
 
             </div>
-            <div class="tag-switch">
+            <button class="tag-switch" aria-label="Chuyển đổi chế độ sáng tối" title="Chuyển đổi chế độ sáng tối">
                 <i class="bi bi-brightness-high"></i>
-            </div>
+            </button>
         </header>
 
         <main>
         <section id="home" aria-labelledby="home-title">
                 <div class="home-content">
                     <div id="picture-container">
-                        <div id="picture" class="glass-frame">
+                        <div id="picture" class="glass-frame" tabindex="0" aria-label="Ảnh chân dung Nguyễn Hữu Gia Lượng">
                             <img src="assets/img/avatar.jpeg" alt="Ảnh chân dung Nguyễn Hữu Gia Lượng"
                                 class="profile-img">
                         </div>
                     </div>
 
-                    <div class="intro-text">
+                    <div class="intro-text" tabindex="0" aria-label="Giới thiệu bản thân">
                         <h1 id="home-title" class="animate-reveal">Về tôi</h1>
                         <h2 class="animate-reveal delay-1">Tôi là <span>Nguyễn Hữu Gia Lượng</span></h2>
                         <h4 class="animate-reveal delay-2">A student at Hue University of Sciences</h4>
@@ -69,64 +69,64 @@
 
             <section id="information" aria-labelledby="info-title">
                 <div class="info-container">
-                    <h2 id="info-title" class="animate-on-scroll">Hành trình sáng tạo</h2>
-                    <p class="info-intro animate-on-scroll">
+                    <h2 id="info-title" class="animate-on-scroll" tabindex="0">Hành trình sáng tạo</h2>
+                    <p class="info-intro animate-on-scroll" tabindex="0">
                         "Không chỉ là một sinh viên, tôi là người kể chuyện qua những khung hình. Mỗi sản phẩm là một
                         hành trình kết nối cảm xúc và tư duy sáng tạo."
                     </p>
 
                     <div class="skills-grid">
                         <!-- Card 1: Creative Visuals -->
-                        <div class="skill-card animate-on-scroll">
+                        <div class="skill-card animate-on-scroll" tabindex="0" aria-label="Kỹ năng Lập trình">
                             <div class="card-content">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-code"></i>
                                 </div>
-                                <h3>JUNIOR CODER</h3>
+                                <h3 lang="en">JUNIOR CODER</h3>
                                 <ul>
-                                    <li>C/C++ Programer (Lập trình C/C++)</li>
-                                    <li>Front-end Beginner</li>
-                                    <li>AI Coding Assistant</li>
+                                    <li lang="en"><p>C/C++ Programer (Lập trình C/C++)</p></li>
+                                    <li lang="en"><p>Front-end Beginner</p></li>
+                                    <li lang="en"><p>AI Coding Assistant</p></li>
                                 </ul>
-                                <div class="liquid-progress">
+                                <div class="liquid-progress" role="progressbar" aria-label="Tiến độ học tập C/C++" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                                     <div id="liquid-fill-1" class="liquid-fill" data-progress="85"></div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Card 2: Post-Production -->
-                        <div class="skill-card animate-on-scroll">
+                        <div class="skill-card animate-on-scroll" tabindex="0" aria-label="Kỹ năng mềm">
                             <div class="card-content">
                                 <div class="icon-box">
                                     <i class="fa-regular fa-lightbulb"></i>
                                 </div>
-                                <h3>SKILLS</h3>
+                                <h3 lang="en">SKILLS</h3>
                                 <ul>
-                                    <li>Teamwork (Làm Việc Nhóm)</li>
-                                    <li>Communication (Giao tiếp)</li>
-                                    <li>Data Structure & Algorithms</li>
+                                    <li lang="en"><p> Teamwork (Làm Việc Nhóm)</p></li>
+                                    <li lang="en"><p> Communication (Giao tiếp)</p></li>
+                                    <li lang="en"><p> Data Structure & Algorithms</p></li>
 
                                 </ul>
-                                <div class="liquid-progress">
+                                <div class="liquid-progress" role="progressbar" aria-label="Kỹ năng làm việc nhóm và giao tiếp" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                                     <div id="liquid-fill-2" class="liquid-fill" data-progress="90"></div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Card 3: Digital Presence -->
-                        <div class="skill-card animate-on-scroll">
+                        <div class="skill-card animate-on-scroll" tabindex="0" aria-label="Định hướng nghề nghiệp">
                             <div class="card-content">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-diagram-project"></i>
                                 </div>
-                                <h3>CAREER DESIRE</h3>
+                                <h3 lang="en">CAREER DESIRE</h3>
                                 <ul>
-                                    <li>Software Tester</li>
-                                    <li>Senior Fullstack Web</li>
-                                    <li>Software Engineer</li>
+                               <p>     <li lang="en"><p>Software Tester </p></li>
+                                    <li lang="en"><p>Senior Fullstack Web </p></li>
+                                    <li lang="en"><p>Software Engineer </p></li>
 
                                 </ul>
-                                <div class="liquid-progress">
+                                <div class="liquid-progress" role="progressbar" aria-label="Mức độ sẵn sàng nghề nghiệp" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                                     <div id="liquid-fill-3" class="liquid-fill" data-progress="80"></div>
                                 </div>
                             </div>
@@ -137,8 +137,8 @@
 
             <section id="social-network" aria-labelledby="social-title">
                 <div class="social-container animate-on-scroll">
-                    <h2 id="social-title">Kết nối</h2>
-                    <p class="social-subtitle">Hãy ghé thăm các trang mạng xã hội của tôi để cùng chia sẻ và kết nối
+                    <h2 id="social-title" tabindex="0">Kết nối</h2>
+                    <p class="social-subtitle" tabindex="0">Hãy ghé thăm các trang mạng xã hội của tôi để cùng chia sẻ và kết nối
                         những điều thú vị!</p>
                     <div class="dock-wrapper">
                         <nav class="dock">
