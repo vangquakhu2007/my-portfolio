@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/src/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+    <title>Nguyễn Hữu Gia Lượng</title>
+</head>
+
+<body>
+    <div class="background-wrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <header class="filter-tag">
+            <div class="glass-header">
+                <ul class="menu">
+                    <li><a href="#home">Về tôi</a></li>
+                    <li><a href="#information">Giới thiệu</a></li>
+                    <li><a href="#social-network">Kết nối</a></li>
+                </ul>
+
+            </div>
+            <div class="tag-switch">
+                <i class="bi bi-brightness-high"></i>
+            </div>
+        </header>
+
+        <main>
+        <section id="home" aria-labelledby="home-title">
+                <div class="home-content">
+                    <div id="picture-container">
+                        <div id="picture" class="glass-frame">
+                            <img src="assets/img/avatar.jpeg" alt="Ảnh chân dung Nguyễn Hữu Gia Lượng"
+                                class="profile-img">
+                        </div>
+                    </div>
+
+                    <div class="intro-text">
+                        <h1 id="home-title" class="animate-reveal">Về tôi</h1>
+                        <h2 class="animate-reveal delay-1">Tôi là <span>Nguyễn Hữu Gia Lượng</span></h2>
+                        <h4 class="animate-reveal delay-2">A student at Hue University of Sciences</h4>
+                        <p id="typing-text" class="typing-animation">
+                            Tôi là sinh viên năm nhất tại Hue University of Sciences. Bên cạnh tên thật, tôi còn được
+                            một số người biết đến với tên phụ là <span class="nickname">Vàng Quá Khứ</span>. Hành trình
+                            của tôi cũng giống như nhiều sinh viên bình thường khác: học tập, rèn luyện, đi làm và từng
+                            bước tìm kiếm định hướng cho bản thân. Tôi không phải là người quá nổi bật hay được nhiều
+                            người biết đến, nhưng tôi luôn cố gắng học hỏi từ những điều nhỏ nhất. Hiện tại, tôi có sự
+                            quan tâm đến quay phim, chụp ảnh và chia sẻ nội dung trên các nền tại mạng xã hội.
+                        </p>
+                        <div id="scroll-down-container" class="scroll-hidden">
+                            <a href="#information" class="scroll-btn" aria-label="Cuộn xuống phần giới thiệu">
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="information" aria-labelledby="info-title">
+                <div class="info-container">
+                    <h2 id="info-title" class="animate-on-scroll">Hành trình sáng tạo</h2>
+                    <p class="info-intro animate-on-scroll">
+                        "Không chỉ là một sinh viên, tôi là người kể chuyện qua những khung hình. Mỗi sản phẩm là một
+                        hành trình kết nối cảm xúc và tư duy sáng tạo."
+                    </p>
+
+                    <div class="skills-grid">
+                        <!-- Card 1: Creative Visuals -->
+                        <div class="skill-card animate-on-scroll">
+                            <div class="card-content">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <h3>JUNIOR CODER</h3>
+                                <ul>
+                                    <li>C/C++ Programer (Lập trình C/C++)</li>
+                                    <li>Front-end Beginner</li>
+                                    <li>AI Coding Assistant</li>
+                                </ul>
+                                <div class="liquid-progress">
+                                    <div id="liquid-fill-1" class="liquid-fill" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Post-Production -->
+                        <div class="skill-card animate-on-scroll">
+                            <div class="card-content">
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-lightbulb"></i>
+                                </div>
+                                <h3>SKILLS</h3>
+                                <ul>
+                                    <li>Teamwork (Làm Việc Nhóm)</li>
+                                    <li>Communication (Giao tiếp)</li>
+                                    <li>Data Structure & Algorithms</li>
+
+                                </ul>
+                                <div class="liquid-progress">
+                                    <div id="liquid-fill-2" class="liquid-fill" data-progress="90"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Digital Presence -->
+                        <div class="skill-card animate-on-scroll">
+                            <div class="card-content">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-diagram-project"></i>
+                                </div>
+                                <h3>CAREER DESIRE</h3>
+                                <ul>
+                                    <li>Software Tester</li>
+                                    <li>Senior Fullstack Web</li>
+                                    <li>Software Engineer</li>
+
+                                </ul>
+                                <div class="liquid-progress">
+                                    <div id="liquid-fill-3" class="liquid-fill" data-progress="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="social-network" aria-labelledby="social-title">
+                <div class="social-container animate-on-scroll">
+                    <h2 id="social-title">Kết nối</h2>
+                    <p class="social-subtitle">Hãy ghé thăm các trang mạng xã hội của tôi để cùng chia sẻ và kết nối
+                        những điều thú vị!</p>
+                    <div class="dock-wrapper">
+                        <nav class="dock">
+                            <a href="https://facebook.com/vangcomeback" class="dock-item" aria-label="Facebook" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span class="dock-label">Facebook</span>
+                            </a>
+                            <a href="https://instagram.com/ng.lng_1108" class="dock-item" aria-label="Instagram" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span class="dock-label">Instagram</span>
+                            </a>
+                            <a href="https://tiktok.com/@vangcomeback" class="dock-item" aria-label="Tiktok" target="_blank">
+                                <i class="fa-brands fa-tiktok"></i>
+                                <span class="dock-label">Tiktok</span>
+                            </a>
+                            <a href="https://linkedin.com/in/vangcomeback" class="dock-item" aria-label="LinkedIn" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span class="dock-label">LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/anhkhomau2007/" class="dock-item" aria-label="Github" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span class="dock-label">Github</span>
+                            </a>
+                            <a href="mailto:hi.vangquakhu.2007@gmail.com" class="dock-item" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="dock-label">Email</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="glass-footer">
+            <p>&copy; Được tạo bởi Gemini AI PRO và Nguyễn Hữu Gia Lượng (Vàng QK)</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
