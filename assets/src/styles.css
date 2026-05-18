@@ -524,7 +524,7 @@ body.light-theme .skill-card {
 }
 
 @media (min-width: 768px) {
-  .card-content {
+.card-content {
     /* Static content */
   }
 }
@@ -916,33 +916,67 @@ body.light-theme .dock-label {
 .glass-footer {
   width: 100%;
   padding: 20px 20px;
-  margin-top: 60px;
-  background:footer var(--glass-bg);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  margin-top: 100px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid var(--glass-border);
   text-align: center;
   position: relative;
   z-index: 2;
+  overflow: hidden;
+}
+
+/* Liquid edge effect for footer */
+.glass-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    rgba(255, 255, 255, 0.5),
+    var(--accent-color),
+    transparent
+  );
+  animation: liquid-move 8s linear infinite;
+  z-index: 3;
+}
+
+@keyframes liquid-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
 }
 
 .glass-footer p {
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-size: 0.95rem;
+  opacity: 0.9;
   letter-spacing: 1px;
   font-weight: 500;
   margin: 0;
-  background: linear-gradient(to right, var(--text-color), var(--accent-color));
+  background: linear-gradient(to right, #fff, var(--accent-color), #fff);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: text-shine 4s linear infinite;
+  position: relative;
+  z-index: 4;
+}
+
+@keyframes text-shine {
+  to { background-position: 200% center; }
 }
 
 @media (min-width: 768px) {
   .glass-footer {
     padding: 20px 20px;
   }
-  
   .glass-footer p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
+
